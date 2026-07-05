@@ -22,3 +22,16 @@ docker-compose.override.yml
 /storage/*.key
 composer.lock
 package-lock.json
+
+# Build files
+/public/build/
+/public/hot
+/public/mix-manifest.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+storage/logs/*.log

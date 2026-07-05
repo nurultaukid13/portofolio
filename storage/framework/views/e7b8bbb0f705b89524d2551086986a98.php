@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Personal Portfolio - Web Developer">
     
-    <title>@yield('title', 'My Portfolio')</title>
+    <title><?php echo $__env->yieldContent('title', 'My Portfolio'); ?></title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -20,15 +20,15 @@
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <a href="{{ route('home') }}" class="text-2xl font-bold text-blue-600">
+                <a href="<?php echo e(route('home')); ?>" class="text-2xl font-bold text-blue-600">
                     Portfolio
                 </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="{{ route('home') }}" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-                    <a href="{{ route('projects') }}" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
-                    <a href="{{ route('contact') }}" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <a href="<?php echo e(route('home')); ?>" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="<?php echo e(route('projects')); ?>" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="<?php echo e(route('contact')); ?>" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -41,9 +41,9 @@
                     
                     <!-- Mobile Menu -->
                     <div x-show="open" x-transition class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-                        <a href="{{ route('home') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
-                        <a href="{{ route('projects') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
-                        <a href="{{ route('contact') }}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+                        <a href="<?php echo e(route('home')); ?>" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+                        <a href="<?php echo e(route('projects')); ?>" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Projects</a>
+                        <a href="<?php echo e(route('contact')); ?>" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
 
     <!-- Main Content -->
     <main>
-        @yield('content')
+        <?php echo $__env->yieldContent('content'); ?>
     </main>
 
     <!-- Footer -->
@@ -60,7 +60,7 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <p class="text-gray-400">&copy; {{ date('Y') }} My Portfolio. All rights reserved.</p>
+                    <p class="text-gray-400">&copy; <?php echo e(date('Y')); ?> My Portfolio. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-4">
                     <a href="https://github.com/yourusername" target="_blank" class="text-gray-400 hover:text-white transition">
@@ -79,3 +79,4 @@
     </footer>
 </body>
 </html>
+<?php /**PATH /Users/m/Documents/masa_kerja/freelance/build/portofolio/resources/views/layouts/app.blade.php ENDPATH**/ ?>
