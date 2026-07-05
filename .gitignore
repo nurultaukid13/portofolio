@@ -35,3 +35,6 @@ Thumbs.db
 # Logs
 *.log
 storage/logs/*.log
+
+# Compiled views
+storage/framework/views/*.php
